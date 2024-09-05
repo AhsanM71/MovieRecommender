@@ -15,7 +15,7 @@ def main():
     vector = cv.fit_transform(new_movie_df['tags']).toarray()
 
     similary = cosine_similarity(vector)
-    recommend("Avatar", new_movie_df, similary)
+    recommend("Toy Story", new_movie_df, similary)
 
     pickle.dump(new_movie_df, open('./artificats/movie_list.pkl', 'wb'))
     pickle.dump(similary, open('./artificats/similary_list.pkl', 'wb'))
